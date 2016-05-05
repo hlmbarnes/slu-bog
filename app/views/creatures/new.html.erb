@@ -1,2 +1,16 @@
 <h1>Creatures#new</h1>
 <p>Find me in app/views/creatures/new.html.erb</p>
+
+<%= form_for @creature do |c| %>
+<!-- @tweet is instance variable and where t is an object reference for difference components of a form -->
+<div>
+  <%= c.label :name %>
+  <%= c.text_area :name %>
+</div>
+<div>
+  <%= c.label :description %>
+  <%= c.text_area :description %>
+</div>
+  <%= c.submit  %>
+
+<% end %>
