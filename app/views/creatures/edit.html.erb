@@ -1,2 +1,20 @@
-<h1>Creatures#edit</h1>
-<p>Find me in app/views/creatures/edit.html.erb</p>
+
+<div class="col-md-6-offset-2 ">
+  <h1>Edit Your Findings!</h1>
+</div>
+
+<div class="col-md-6-offset-2 ">
+  <%= form_for @creature do |c| %>
+    
+    <div>
+      <%= c.label :name %>
+      <%= c.text_field :name %>
+    </div>
+
+    <div>
+      <%= c.label :description %>
+      <%= c.text_area :description %>
+    </div>
+    <%= c.submit %>
+    
+  <% end %>
