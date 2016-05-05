@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   root 'main#index'
 
+  get 'main/about' => 'main#about'
+
   # get 'creatures' => 'main#creatures'
    
   resources :creatures

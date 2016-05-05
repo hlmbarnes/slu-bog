@@ -24,7 +24,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.2.0'
-gem 'bootstrap_form'
+
+#bootstrap form and then forces to download from github
+gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
+
 
 # gem 'rails_bootstrap_navbar'
 # bootstrap
@@ -39,7 +42,7 @@ gem 'bootstrap_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # gem 'byebug'
 end
 
 group :development do
