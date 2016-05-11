@@ -1,20 +1,11 @@
 
 <div class="col-md-6-offset-2 ">
-  <h1>Edit Your Findings!</h1>
-</div>
-
-<div class="col-md-6-offset-2 ">
-  <%= form_for @creature do |c| %>
-    
-    <div>
-      <%= c.label :name %>
+  <h1>Edit Your Findings!<%= @creature.name  %></h1>
+  <%=bootstrap_form_for(@creature) do |c| %>
       <%= c.text_field :name %>
-    </div>
-
-    <div>
-      <%= c.label :description %>
       <%= c.text_area :description %>
-    </div>
+    <%=c.collection_check_boxes :tag_ids, @tags, :id, :name %>
     <%= c.submit %>
+    </div>
     
   <% end %>

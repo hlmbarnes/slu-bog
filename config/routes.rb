@@ -16,13 +16,21 @@ Rails.application.routes.draw do
 
   # get 'index/about'
 
+  
+
+
   root 'main#index'
 
   get 'main/about' => 'main#about'
 
+  get 'creatures' => 'creatures#index'
+
+  post 'creatures' => 'creatures#create'
+
   # get 'creatures' => 'main#creatures'
    
   resources :creatures
+  resources :tags
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

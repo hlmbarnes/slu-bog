@@ -11,6 +11,10 @@
     <div>
       <%= c.text_area :description %>
     </div>
+    <div>
+       <%=c.collection_check_boxes :tag_ids, @tags, :id, :name %>
+    </div>
     <%= c.submit %>
+
 
 <% end %>
